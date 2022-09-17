@@ -54,7 +54,7 @@ function createServer() {
     };
     try {
       const test = await Test.updateOne(id, subscriber);
-      res.status(200).json(test);
+      res.status(201).json(test);
     } catch (err) {
       res.status(404).json({ message: err.message });
     }
