@@ -1,13 +1,13 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const testSchema = new mongoose.Schema({
     name: {
         type: String,
-        required
+        required: true
     },
     age: {
         type: Number,
-        required
+        required: true
     }
 });
 
