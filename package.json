@@ -1,6 +1,6 @@
 {
   "name": "OTOT-B",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "repository for web application task",
   "main": "src/index.js",
   "author": "Aditya Banerjee <aditya_banerjee@icloud.com>",
