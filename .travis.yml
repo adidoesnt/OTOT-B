@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "14"
+services:
+  - mongodb
 env:
   - DB_URL="mongodb://localhost/test"
 script:
