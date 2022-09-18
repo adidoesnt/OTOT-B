@@ -19,6 +19,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "bump": "npm version patch -m \"Upgrade to %s\" && git push && git push --tags"
   }
 }
