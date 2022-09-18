@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "14"
+script:
+  - echo "START BUILD"
+  - echo "installing dependencies..."
+  - yarn
+  - echo "running tests..."
+  - jest
