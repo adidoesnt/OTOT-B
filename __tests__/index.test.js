@@ -6,6 +6,8 @@ const app = createServer();
 const server = startServer(app);
 let id;
 
+jest.setTimeout(20000);
+
 afterAll(async () => {
   await stopServer(server);
   await new Promise((resolve) => setTimeout(() => resolve(), 500));
