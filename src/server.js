@@ -82,8 +82,8 @@ function startServer(app) {
   db.on("error", (error) => console.log(error));
   db.on("open", () => console.log("connected to database"));
 
-  return app.listen(8080, () => {
-    console.log("server listening on port 8080");
+  return app.listen(process.env.PORT || 8080, () => {
+    console.log("server listening");
   });
 }
 
