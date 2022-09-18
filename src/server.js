@@ -74,7 +74,10 @@ function createServer() {
 }
 
 function startServer(app) {
-  mongoose.connect(process.env.DB_URL, { useNewUrlParser: true });
+  mongoose.connect(process.env.DB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   const db = mongoose.connection;
   db.on("error", (error) => console.log(error));
   db.on("open", () => console.log("connected to database"));
@@ -85,13 +88,13 @@ function startServer(app) {
 }
 
 async function stopServer(server) {
-    mongoose.connection.close(true);
-    await mongoose.disconnect();
-    server.close();
+  mongoose.connection.close(true);
+  await mongoose.disconnect();
+  server.close();
 }
 
 module.exports = {
-    createServer,
-    startServer,
-    stopServer
-}
+  createServer,
+  startServer,
+  stopServer,
+};
