@@ -1,22 +1,22 @@
 language: node_js
 node_js:
-  - "14"
+- '14'
 services:
-  - mongodb
+- mongodb
 env:
-  - DB_URL="mongodb://localhost/test"
+- DB_URL="mongodb://localhost/test"
 script:
-  - echo "START BUILD"
-  - echo "installing dependencies..."
-  - yarn
-  - echo "running tests..."
-  - jest
+- echo "START BUILD"
+- echo "installing dependencies..."
+- yarn
+- echo "running tests..."
+- jest
 deploy:
   provider: heroku
-  api_key:
-    secure: i4RdLybsDEyAJNoKHJ4UgqVmqt0gzPMRBPJJYu12tHYcWU/NRwRp3MLGwGuh9zV4pXuUQwAh6SaATNsqtAse5R3mNuP1ttkE3la4MD0HPsVCVu400RLdr8/9wTLnuOJBZKbKTNfP7cSkRYmb0p1DWULV6tHiRmIbviRvr8i6SS9lBo70zAQ83bVcME93F+mSkHysVmgOzC9fIzwGYSy5nkL+e6RhIfSh1yTy+JIZi+iMBiobdROuL5D0m8nCEgI/ApyOxRRhHo0nbFbcG8qSLiQ80bYZuXn/hPrxkVv6uQFFNNr2yqcIAq0AkOc36Gkm5Td0M3qHZxKJQBO4rEOw+sq4oag7+TNya6Smo7vD5ryIeabSejrDjLWFAxwj8+Y8OwjZblgRdJR9cM0IXD0OuGID61dmj9IRSV9TiVFhEGtlHPAVu4sLupdcPMWd7Kf0qQ11KGU2KuIztCfSAhp+xxZNugADU6TfaOEZJaAndseAbUDGHQ2li81DzvUKGSUfmgr5us74wrpNTs8Nd47eofh/u9ffcm4HQ5jFDe0+BcKl9HwTU9jAOaaHmShqOjdO4e+I4sBBA5fCGyk1MXixpYFieqEPXekFt532SkyCG8cPC3oII6BIszxlXxmtBHMxcqV7AZNhTaP7ETQ+9ldRqRpnIo8S72KDut2oa36kpPc=
   app: adidoesnt-otot-b
   on:
     tags: true
     branches:
       only: main
+  api_key:
+    secure: cdzg1MjLt5Y0jLNw1h7WkzbpLW/gVl5kES28jSZ8JmmcrAxVIOSMKR5eJH6DbDjCVq1HTEBn+PJnAhINqMJERHBjLM/eZRpt9NKPtp9IEQcg50pM3DUXtzroMOtMEKPFkHKzRlyzFIh2BtqcbmYF3tKFlsNx3RdXdQb+JOiw/VfBigrgq9hGl4tg0LBWwhAT9AWBrIE3BBzUXX/C0eq6NtPwwhrKL16zJCQimxrdMySaGKQmFB+c1DDCdXbyMQgyN1wCQXZKvlcEvyOnpE/V7ilFcPZRtN1iNcfMmJKATJsZcqeWW1ZsgaJfU4YB/F6pxVoVj2Zkji3b5MIXw6bYicpKaYAisdnlbJfa4a5+AjqgOG51ZDWxsbbL/P5lDzXpLFzxTC3XZ9wdsWIBbcF0u2OAllZWxGeE8PsAy/jF0QBqXM8O3PPT/LkS9gEitc2vbTRosA/P05FvOOxpmbVtI8XG0C4c3jvmzEboX+u+GfHcePTBe8Hkoa8GACxYDmvtzxzsvyNZ1UVJtERNosj6ogg1T+wq5gV5wru9RCOclUf96i2cxXyaRXmOSMN9XjtAiZp0MK0bXTwAbbpKBPWSpjQzOeCZO/W+EaLipr5eWNJxnMgTirSjgqCODnqqtw/vFGiDmziNmxBW6X9dga3l+YrMmVzKGqlkhA+vsxx1Zyk=
